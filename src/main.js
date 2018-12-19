@@ -3,8 +3,9 @@ import style from './style.js';
 
 // Bookmarkletにする必要あるからできるだけ（可読性がいい前提で）短いコードで書くモミ
 const _dialog = document.createElement('dialog');
-document.body.appendChild(_dialog);
 _dialog.textContent = '作業中モミ';
+_dialog.classList.add('_dtm-dialog');
+document.body.appendChild(_dialog);
 _dialog.showModal();
 
 setTimeout(() => {
@@ -23,33 +24,35 @@ setTimeout(() => {
 	}`);
 
 	Array.from(doras).map(dora => {
-		const id = dora.title.match(/[0-9]+/)[0] || null;
+		if (!dora.textContent.includes('希石')) {
+			const id = dora.title.match(/[0-9]+/)[0] || null;
 
-		const parentElement = dora.parentElement;
-		if (parentElement) {
-			parentElement.innerHTML = `
-				<label class="_dtm">
-					<input
-						class="_dtm-input"
-						type="checkbox"
-						value="${id}"
-						${doraTasoManager.has(Number(id)) ? 'checked' : ''} />
-					<div class="_dtm-content">
-						${parentElement.innerHTML}
-					</div>
-				</label>
-			`;
+			const parentElement = dora.parentElement;
+			if (parentElement) {
+				parentElement.innerHTML = `
+					<label class="_dtm">
+						<input
+							class="_dtm-input"
+							type="checkbox"
+							value="${id}"
+							${doraTasoManager.has(Number(id)) ? 'checked' : ''} />
+						<div class="_dtm-content">
+							${parentElement.innerHTML}
+						</div>
+					</label>
+				`;
 
-			setTimeout(() => {
-				// 押し間違い防止どら
-				parentElement.querySelector('._dtm-content a').removeAttribute('href');
-				parentElement.querySelector('._dtm-input').addEventListener('input', event => {
-					const thisDora = event.target;
-					doraTasoManager[
-						thisDora.checked ? 'add' : 'remove'
-					](Number(thisDora.value));
-				}, false);
-			}, 0);
+				setTimeout(() => {
+					// 押し間違い防止どら
+					parentElement.querySelector('._dtm-content a').removeAttribute('href');
+					parentElement.querySelector('._dtm-input').addEventListener('input', event => {
+						const thisDora = event.target;
+						doraTasoManager[
+							thisDora.checked ? 'add' : 'remove'
+						](Number(thisDora.value));
+					}, false);
+				}, 0);
+			}
 		}
 	});
 
