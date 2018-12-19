@@ -3,8 +3,9 @@ import style from './style.js';
 
 // Bookmarkletにする必要あるからできるだけ（可読性がいい前提で）短いコードで書くモミ
 const _dialog = document.createElement('dialog');
-document.body.appendChild(_dialog);
 _dialog.textContent = '作業中モミ';
+_dialog.classList.add('_dtm-dialog');
+document.body.appendChild(_dialog);
 _dialog.showModal();
 
 setTimeout(() => {
