@@ -9,7 +9,7 @@
 ## ブックマークレット化どら🐉
 1. [このリンク](https://raw.githubusercontent.com/eky/dora-taso-momiji/master/dist/main.js)を開いて
 2. 中身をコピーして
-3. ブラウザを作成して、URL欄に`javascript:`とあの中身を入れる
+3. ブックマークを作成して、URL欄に`javascript:`とあの中身を入れる
 
 ## 使うどら🐉
 1. [図鑑/簡易一覧表 - パズル＆ドラゴンズ非公式wiki 【パズドラ】 - アットウィキ](https://www18.atwiki.jp/pazdra/pages/1659.html)を開いて
