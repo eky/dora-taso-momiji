@@ -1,0 +1,34 @@
+{
+  "name": "dora-taso-momiji",
+  "version": "0.4545.1",
+  "description": "パズドラのアットウィキ[図鑑/簡易一覧表]を弄って手持ちのどら＆たそズを選択してどっかに共有できるようにするやつ。",
+  "main": "dist/dora-taso-momiji.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --content-base=./ --open --open-page=example/ --inline --watch --hot",
+    "build": "cross-env NODE_ENV=production webpack --watch"
+  },
+  "keywords": [
+    "どら",
+    "たそ",
+    "もみじ"
+  ],
+  "author": "Eky Kwan <eky@eky.hk>",
+  "homepage": "https://github.com/eky/dora-taso-momiji#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eky/dora-taso-momiji"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-preset-modern-browsers": "^12.0.0-beta.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.10.0",
+    "terser-webpack-plugin": "^1.1.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
