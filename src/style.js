@@ -27,6 +27,16 @@ const style = `
 	._dtm-input:checked + ._dtm-content {
 		background: LightGreen;
 	}
+
+	@keyframes momiji {
+		from { transform: scaleX(.8) }
+		to { transform: scaleX(1.2) }
+	}
+
+	._dtm-dialog {
+		position: fixed;
+		animation: momiji .8s infinite alternate;
+	}
 `;
 
 export default style;

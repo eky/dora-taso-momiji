@@ -1,7 +1,7 @@
 {
   "name": "dora-taso-momiji",
-  "version": "0.4545.1",
-  "description": "パズドラのアットウィキ[図鑑/簡易一覧表]を弄って手持ちのどら＆たそズを選択してどっかに共有できるようにするやつ。",
+  "version": "0.4545.2",
+  "description": "パズドラのアットウィキ[図鑑/簡易一覧表]を弄って手持ちのどら＆たそズのリストを作成してどっかに共有できるようにするやつ",
   "main": "dist/dora-taso-momiji.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --content-base=./ --open --open-page=example/ --inline --watch --hot",
