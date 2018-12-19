@@ -29,12 +29,13 @@ const style = `
 	}
 
 	@keyframes momiji {
-		from { transform: rotate(0deg) }
-		to { transform: rotate(360deg) }
+		from { transform: scaleX(.8) }
+		to { transform: scaleX(1.2) }
 	}
 
 	._dtm-dialog {
-		animation: momiji .8s infinite;
+		position: fixed;
+		animation: momiji .8s infinite alternate;
 	}
 `;
 
