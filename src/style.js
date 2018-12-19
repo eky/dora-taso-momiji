@@ -16,7 +16,7 @@ const style = `
 	._dtm-content {
 		display: block;
 		padding-left: 30px;
-		background: #f5baba;
+		background: #f7dada;
 		transition: all .3s ease-in-out;
 	}
 
